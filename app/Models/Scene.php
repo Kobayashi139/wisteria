@@ -7,5 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Scene extends Model
 {
-    use HasFactory;
+    protected $table = 'scene';
+    protected $attributes = [
+            'created_by' => 0,
+            'update_by' => 0,
+        ];
+    
+    // use HasFactory;
 }

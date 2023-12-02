@@ -15,7 +15,9 @@ use App\Http\Controllers\SceneController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
-Route::get('/scenes', [SceneController::class, 'index']);
+Route::get('/creates', [PostController::class, 'index']);
+
+Route::post('/creates', [SceneController::class, 'store']);
