@@ -18,6 +18,6 @@ use App\Http\Controllers\SceneController;
 //     return view('index'); 
 // });
 
-Route::get('/', [PostController::class, 'index']);
-Route::get('/sceane/create', [PostController::class, 'cleate']);
+Route::get('/', [SceneController::class, 'index'])->name('scenes.index');
+Route::get('/sceane/create', [SceneController::class, 'cleate']);
 Route::post('/create', [SceneController::class, 'store']);
