@@ -9,7 +9,7 @@ class SceneController extends Controller
 {
     public function index(Scene $scene)
     {
-        return $scene->get(); //$sceneの中身を戻り値にする 
+        return view('scene.index')->with(['scenes' => $scenes->git()]); //$sceneの中身を戻り値にする 
     }
 
     public function create(Request $request){

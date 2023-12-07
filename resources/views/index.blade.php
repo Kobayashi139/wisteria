@@ -8,8 +8,9 @@
     </head>
     <body>
 
-        <form action="/scenes" method ="POST">
+        <form action="/posts" method ="POST">
             <div class="contentpost">
+                @csrf
                 <div class="title">
                     <h1>タイトル</h1>
                     <input type="text" name="title[title]" value="" id="title">
@@ -22,5 +23,5 @@
             <input type="submit" value="投稿する">
         </form>
       
-        
+        <a href='/posts/create'>create</a>
     </body>

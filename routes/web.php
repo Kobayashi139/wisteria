@@ -14,10 +14,10 @@ use App\Http\Controllers\SceneController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+// Route::get('/', function () {
+//     return view('index'); 
+// });
 
-Route::get('/creates', [PostController::class, 'index']);
-
-Route::post('/creates', [SceneController::class, 'store']);
+Route::get('/', [PostController::class, 'index']);
+Route::get('/sceane/create', [PostController::class, 'cleate']);
+Route::post('/create', [SceneController::class, 'store']);
