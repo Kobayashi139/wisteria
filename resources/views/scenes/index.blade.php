@@ -22,6 +22,8 @@
             </div>
             <input type="submit" value="投稿する">
         </form>
-      
-        <a href='/posts/create'>create</a>
+        
+        <h2 class='title2'>
+            <a href="/scenes/{{ $scene->id }}">{{ $scene->title }}</a>
+        </h2>
     </body>
