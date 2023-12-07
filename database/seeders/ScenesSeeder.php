@@ -4,7 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Scene;
+use Illuminate\Support\Facades\DB;
+use DateTime;
 
 class ScenesSeeder extends Seeder
 {
@@ -15,11 +16,11 @@ class ScenesSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('scene')->insert([
+        DB::table('scenes')->insert([
             'title' => 'Sample1',
             'content' => 'Samplecontent1',
-            'created_at' => now(),
-            'updated_at' =>NULL
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime(),
             ]);
            
             

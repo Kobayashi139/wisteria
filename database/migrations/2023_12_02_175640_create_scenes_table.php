@@ -17,8 +17,6 @@ return new class extends Migration
             $table->id();
             $table->string('title', 80);
             $table->string('content', 200);
-            $table->tinyInteger('created_by');
-            $table->tinyInteger('update_by');
             $table->timestamps();
         });
     }
