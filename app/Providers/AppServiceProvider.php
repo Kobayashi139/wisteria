@@ -26,4 +26,5 @@ class AppServiceProvider extends ServiceProvider
     {
         Paginator::useBootstrap(); //動画
     }
+    
 }

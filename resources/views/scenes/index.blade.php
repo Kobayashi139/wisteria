@@ -22,8 +22,14 @@
             </div>
             <input type="submit" value="投稿する">
         </form>
-        
-        <h2 class='title2'>
-            <a href="/scenes/{{ $scene->id }}">{{ $scene->title }}</a>
-        </h2>
+        <div class ="scenes">
+            @foreach($scenes as $scene)
+                <div class="scene">
+                    <h2 class='title2'>
+                        <a href="/scenes/{{ $scene->id }}">{{ $scene->title }}</a>
+                    </h2>
+                </div>
+            @endforeach
+        </div>
+
     </body>
