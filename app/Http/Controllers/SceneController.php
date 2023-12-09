@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Scene;
-use APP\Http\Requests\SceneRequest;
+use App\Http\Requests\SceneRequest;
 
 class SceneController extends Controller
 {
@@ -20,6 +20,25 @@ class SceneController extends Controller
     }
     
     public function create(Request $request){
-        return view('scenes.create')->with(['name' => $name ,'reviews' => $review->get()]);
+        return view('scenes.create');
+        //>with(['name' => $name ,'reviews' => $review->get()]);
     }
+    
+    public function store(Scene $scene, SceneRequest $request)
+    {  
+        $input ->title = $request->title;
+        $input ->content = $request->content;
+        $scene->fill($input)->save(); 
+        return redirect('/scene/' . $scene->id);
+        
+        // $input = $request['scene'];
+        // $scene->fill($input)->save();
+        // return redirect('/scene/' . $scene->id);
+        
+        // $url = url()->previous();
+        // $input = $request['scene'];
+        // $scene->fill($input)->save(); //前回取得したURLをもう一度表示する
+        // return redirect($url);
+    }
+ 
 }

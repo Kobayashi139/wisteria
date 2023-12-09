@@ -8,7 +8,7 @@
     </head>
     <body>
 
-        <form action="/posts" method ="POST">
+        <form action="/scenes" method="POST">
             <div class="contentpost">
                 @csrf
                 <div class="title">
@@ -18,10 +18,12 @@
                 <div class="content">
                     <h1>本文</h1>
                     <textarea name="content[content]" id=content></textarea>
+                     
                 </div>
+                <input type="submit" value="投稿する">
             </div>
-            <input type="submit" value="投稿する">
-        </form>
+        </form>    
+        
         <div class ="scenes">
             @foreach($scenes as $scene)
                 <div class="scene">
@@ -31,5 +33,4 @@
                 </div>
             @endforeach
         </div>
-
     </body>
