@@ -13,27 +13,23 @@ class SceneController extends Controller
     {
         return view('scenes.index')->with(['scenes' => $scene->get()]);//$sceneの中身を戻り値にする 
     }
+    
 
-    public function show(Scene $scene)
+    public function show($name, Scene $scene)
     {
-        return view('scenes.show')->with(['scene' => $scene]);
+        return view('scenes.show')->with(['name' => $name ,'scene' => $scene->get()]);
     }
     
-    public function create(Request $request){
-        return view('scenes.create');
+    public function create($name, Request $request){
+        return view('scenes.create')->with(['name' => $name ]);
         //>with(['name' => $name ,'reviews' => $review->get()]);
     }
     
     public function store(Scene $scene, SceneRequest $request)
     {  
-        $input ->title = $request->title;
-        $input ->content = $request->content;
-        $scene->fill($input)->save(); 
-        return redirect('/scene/' . $scene->id);
-        
-        // $input = $request['scene'];
-        // $scene->fill($input)->save();
-        // return redirect('/scene/' . $scene->id);
+        $input = $request['scene'];
+        $scene->fill($input)->save();
+        return redirect('/');
         
         // $url = url()->previous();
         // $input = $request['scene'];
