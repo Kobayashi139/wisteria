@@ -1,13 +1,14 @@
 <x-app-layout>
-     <body>
-        <h2 class='title2'>
+     <body class='show'>
+         
+        <div class='title2'>
             <h2>タイトル</h2>
-          {{ $scene->title }} 
-        </h2>
+          {{ $scene->title }}
+        </div>
         <div class="content">
             <p>{{ $scene->content }}</p>
         </div>
-        <div classs="footer">
+        <div class="footer">
             <a href="/">戻る</a>
         </div>
     </body>

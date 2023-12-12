@@ -22,8 +22,11 @@ Route::get('/dashboard', function () {
 Route::controller(SceneController::class)->middleware(['auth'])->group(function(){
     Route::get('/', 'index')->name('index');
     Route::post('/scenes', 'store')->name('store');
-    Route::get('/scenes/{scenes}', 'show')->name('show');
+    Route::get('/scenes/show/{scene}', 'show')->name('show');
     Route::get('/scenes/create', 'create')->name('create');
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
  
 });
 

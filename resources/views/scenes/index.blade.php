@@ -1,8 +1,5 @@
 <x-app-layout>
-    <x-slot name="header">
-    </x-slot>
-    
-    <body>
+    <body　class='home'>
         <form action="/scenes" method="POST">
             <div class="contentpost">
                 @csrf
@@ -21,13 +18,11 @@
         
         <div class ="scenes">
             @foreach($scenes as $scene)
-            @if ($scene->title  === $name)
                 <div class="scene">
                     <h2 class='title2'>
-                        <a href="/scenes/show{{ $scene->id }}">{{ $scene->title }}</a>
+                        <a href="/scenes/show/{{ $scene->id }}">{{ $scene->title }}</a>
                     </h2>
                 </div>
-            @endif
             @endforeach
         </div>
     </body>
