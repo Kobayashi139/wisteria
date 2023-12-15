@@ -7,7 +7,7 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
         
-        <link rel="stylesheet" href="{{ asset('/public/css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
         
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -22,7 +22,7 @@
 
             <!-- Page Heading -->
             @if (isset($header))
-                <header class="bg-white dark:bg-gray-800 shadow">
+                <header class="background-color: #181818">
                     <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                         {{ $header }}
                     </div>
@@ -31,7 +31,7 @@
 
             <!-- Page Content -->
             <main>
-                <div style="color:white">
+                <div style="background-color: #181818">
                 {{ $slot }}
                 </div>
             </main>
