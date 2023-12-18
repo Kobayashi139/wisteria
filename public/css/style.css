@@ -74,6 +74,45 @@ input[type="submit"] {
     border-radius: 6px; /* シーンの角丸を設定 */
 }
 
+.pagination {
+    font-size: 25px; 
+    color: #FFFFFF;
+    list-style: none;
+    justify-content: center;
+    margin: 0;
+    display: flex;
+    column-gap: 15px;
+    padding: 10px 16px;
+}
+
+.pagination .page-item {
+    /* 要素の大きさを指定 */
+    width: 40px;
+    height: 40px;
+    /* 背景色やボーダー、余白の設定 */
+    background-color: #313133; 
+    border-radius: 5px; 
+    margin-right: 5px; /* 要素間の余白 */
+    display: flex; /* 子要素の配置を調整するために Flexbox を使用 */
+    justify-content: center; /* 横方向の中央寄せ */
+    align-items: center; /* 縦方向の中央寄せ */
+}
+
+/* 無効なページリンクのスタイル */
+.pagination .page-item.disabled {
+    /* 無効な状態のスタイルを定義 */
+    background-color: #313133; 
+    pointer-events: none; /* イベントの受け付けを無効化 */
+}
+
+/* アクティブなページリンクのスタイル */
+.pagination .page-item.active {
+    /* アクティブな状態のスタイルを定義 */
+    background-color: #0071B0; 
+    color:  #FFFFFF; 
+}
+
+
 /*show.blade*/
 .showtitle, .content p{
     font-size: 18px;
