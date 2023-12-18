@@ -28,6 +28,9 @@
                     </h2>
                 </div>
             @endforeach
+            <div class='paginate'>
+            {{ $scenes->links() }}
+            </div>
             <div class="blank"></div>
         </div>
     </body>
