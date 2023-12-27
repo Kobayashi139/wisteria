@@ -17,6 +17,10 @@ class AppServiceProvider extends ServiceProvider
         //
     }
 
+    protected $policies = [
+        'App\Scene' => 'App\Policies\ScenePolicy',
+    ];
+    
     /**
      * Bootstrap any application services.
      *
