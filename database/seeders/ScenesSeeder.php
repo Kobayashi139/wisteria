@@ -17,6 +17,7 @@ class ScenesSeeder extends Seeder
     public function run()
     {
         DB::table('scenes')->insert([
+            'user_id' => 1,
             'title' => 'Sample1',
             'content' => 'Samplecontent1',
             'created_at' => new DateTime(),

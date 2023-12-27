@@ -24,7 +24,7 @@
             @foreach($scenes as $scene)
                 <div class="scene">
                     <h2 class='scenestitle'>
-                        <a href="/scenes/show/{{ $scene->id }}">{{ $scene->title }}</a>
+                        <a href="/scenes/show/{{ $scene->user_id }}">{{ $scene->title }}</a>
                     </h2>
                 </div>
             @endforeach
